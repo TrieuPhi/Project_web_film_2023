@@ -3,1062 +3,1155 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Flix | Movie web</title>
-
-<link rel="shortcut icon" href="./templates/Images/logo-foursquare.svg">
-
-<!-- CSS -->
-<link rel="stylesheet" href="./templates/CSS/component.css">
-<link rel="stylesheet" href="./templates/CSS/style.css">
-<link rel="stylesheet" href="./templates/CSS/grid.css">
-
-<!-- <link rel="stylesheet" href="./assets/component.css"> -->
-<!-- <link rel="stylesheet" href="./assets/style.css"> -->
-<!-- <link rel="stylesheet" href="./assets/grid.css"> -->
-
-<!-- GOOGLE FONTS -->
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link
-	href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap"
-	rel="stylesheet">
-<link rel="stylesheet"
-	href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link
-	href="https://fonts.googleapis.com/css2?family=Monoton&family=Open+Sans:ital,wght@0,400;1,300&family=Playfair+Display:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&family=Shizuru&display=swap"
-	rel="stylesheet">
-
-<!-- LINK CAROUSEL -->
-<link rel="stylesheet"
-	href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-
-
-
-<!-- BOX ICON  -->
-<link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css'
-	rel='stylesheet'>
-<link rel="stylesheet"
-	href="./assets/fontawesome-free-5.15.4-web/css/all.min.css">
-<link rel="stylesheet" href="./themify-icons/themify-icons.css">
-<script type="module"
-	src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule
-	src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Flix|Movie
+    </title>
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
+    <!-- OWL CAROUSEL -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" />
+    <!-- BOX ICONS -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <!-- APP CSS -->
+    <link rel="stylesheet" href="./templates/CSS/grid.css">
+    <link rel="stylesheet" href="./templates/CSS/app.css">
 </head>
+
 <body>
-	<!-- NAV -->
 
-	<div class="menu-tablet" id="menu-tablet">
-		<ul class="menu-tb-list">
-			<li><a href="#"> home </a></li>
-			<li><a href="#"> Movies </a></li>
-			<li><a href="#"> tv series </a></li>
-			<li><a href="#"> Genre </a></li>
-			<li><a href="#"> setting </a></li>
+    <!-- NAV -->
+    <div class="nav-wrapper">
+        <div class="container">
+            <div class="nav">
+                <a href="#" class="logo">
+                    <i class='bx bx-movie-play bx-tada main-color'></i>Fl<span class="main-color">i</span>x
+                </a>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Genre</a></li>
+                    <li><a href="#">Movies</a></li>
+                    <li><a href="#">Series</a></li>
+                    <li><a href="#">About</a></li>
+                    <li>
+                        <a href="./login-signup/index.html" class="btn btn-hover">
+                            <span>Sign in</span>
+                        </a>
+                    </li>
+                </ul>
+                <!-- MOBILE MENU TOGGLE -->
+                <div class="hamburger-menu" id="hamburger-menu">
+                    <div class="hamburger"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END NAV -->
+
+    <!-- HERO SECTION -->
+    <div class="hero-section">
+        <!-- HERO SLIDE -->
+        <div class="hero-slide">
+            <div class="owl-carousel carousel-nav-center" id="hero-carousel">
+                <!-- SLIDE ITEM -->
+                <div class="hero-slide-item">
+                    <img src="./templates/Images/black-banner.png" alt="">
+                    <div class="overlay"></div>
+                    <div class="hero-slide-item-content">
+                        <div class="item-content-wraper">
+                            <div class="item-content-title top-down">
+                                Black Panther
+                            </div>
+                            <div class="movie-infos top-down delay-2">
+                                <div class="movie-info">
+                                    <i class="bx bxs-star"></i>
+                                    <span>9.5</span>
+                                </div>
+                                <div class="movie-info">
+                                    <i class="bx bxs-time"></i>
+                                    <span>120 mins</span>
+                                </div>
+                                <div class="movie-info">
+                                    <span>HD</span>
+                                </div>
+                                <div class="movie-info">
+                                    <span>16+</span>
+                                </div>
+                            </div>
+                            <div class="item-content-description top-down delay-4">
+                                "Black Panther" is a 2018 Marvel superhero film set in the fictional nation of Wakanda. It follows T'Challa, who becomes
+                                king and the Black Panther. He must protect Wakanda from various threats while dealing with internal and external
+                                conflicts. The film is known for its cultural significance and groundbreaking representation in the superhero genre.
+                            </div>
+                            <div class="item-action top-down delay-6">
+                                <a href="#" class="btn btn-hover">
+                                    <i class="bx bxs-right-arrow"></i>
+                                    <span>Watch now</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END SLIDE ITEM -->
+                <!-- SLIDE ITEM -->
+                <div class="hero-slide-item">
+                    <img src="./templates/Images/supergirl-banner.jpg" alt="">
+                    <div class="overlay"></div>
+                    <div class="hero-slide-item-content">
+                        <div class="item-content-wraper">
+                            <div class="item-content-title top-down">
+                                Supergirl
+                            </div>
+                            <div class="movie-infos top-down delay-2">
+                                <div class="movie-info">
+                                    <i class="bx bxs-star"></i>
+                                    <span>9.5</span>
+                                </div>
+                                <div class="movie-info">
+                                    <i class="bx bxs-time"></i>
+                                    <span>120 mins</span>
+                                </div>
+                                <div class="movie-info">
+                                    <span>HD</span>
+                                </div>
+                                <div class="movie-info">
+                                    <span>16+</span>
+                                </div>
+                            </div>
+                            <div class="item-content-description top-down delay-4">
+                                "Supergirl" is a television series based on the DC Comics character. It follows Kara Zor-El, Superman's cousin, who
+                                embraces her superhuman abilities and becomes Supergirl. She fights crime while balancing her personal and professional
+                                life. The show explores themes of empowerment, identity, and heroism.
+                            </div>
+                            <div class="item-action top-down delay-6">
+                                <a href="#" class="btn btn-hover">
+                                    <i class="bx bxs-right-arrow"></i>
+                                    <span>Watch now</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END SLIDE ITEM -->
+                <!-- SLIDE ITEM -->
+                <div class="hero-slide-item">
+                    <img src="./templates/Images/wanda-banner.jpg" alt="">
+                    <div class="overlay"></div>
+                    <div class="hero-slide-item-content">
+                        <div class="item-content-wraper">
+                            <div class="item-content-title top-down">
+                                Wanda Vision
+                            </div>
+                            <div class="movie-infos top-down delay-2">
+                                <div class="movie-info">
+                                    <i class="bx bxs-star"></i>
+                                    <span>9.5</span>
+                                </div>
+                                <div class="movie-info">
+                                    <i class="bx bxs-time"></i>
+                                    <span>120 mins</span>
+                                </div>
+                                <div class="movie-info">
+                                    <span>HD</span>
+                                </div>
+                                <div class="movie-info">
+                                    <span>16+</span>
+                                </div>
+                            </div>
+                            <div class="item-content-description top-down delay-4">
+                                "WandaVision" is a Marvel TV series that blends classic sitcom styles with the Marvel Cinematic Universe. It follows
+                                Wanda Maximoff and Vision, two superheroes living a seemingly perfect suburban life. As the series unfolds, it becomes
+                                clear that their reality is not what it seems, and Wanda's powers are at play. The show explores themes of grief,
+                                coping, and the consequences of altering reality.
+                            </div>
+                            <div class="item-action top-down delay-6">
+                                <a href="#" class="btn btn-hover">
+                                    <i class="bx bxs-right-arrow"></i>
+                                    <span>Watch now</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END SLIDE ITEM -->
+            </div>
+        </div>
+        <!-- END HERO SLIDE -->
+        <!-- TOP MOVIES SLIDE -->
+        <div class="top-movies-slide">
+            <div class="owl-carousel" id="top-movies-slide">
+                <!-- MOVIE ITEM -->
+                <div class="movie-item">
+                    <img src="./templates/Images/series/supergirl.jpg" alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            Supergirl
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>9.5</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>120 mins</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>HD</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>16+</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END MOVIE ITEM -->
+                <!-- MOVIE ITEM -->
+                <div class="movie-item">
+                    <img src="./templates/Images/movies/captain-marvel.png" alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            Captain Marvel
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>9.5</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>120 mins</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>HD</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>16+</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END MOVIE ITEM -->
+                <!-- MOVIE ITEM -->
+                <div class="movie-item">
+                    <img src="./templates/Images/demon-slayer.jpg" alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            Infinity Train
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>9.5</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>120 mins</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>HD</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>16+</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END MOVIE ITEM -->
+                <!-- MOVIE ITEM -->
+                <div class="movie-item">
+                    <img src="./templates/Images/movies/blood-shot.jpg" alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            Bloodshot
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>9.5</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>120 mins</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>HD</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>16+</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END MOVIE ITEM -->
+                <!-- MOVIE ITEM -->
+                <div class="movie-item">
+                    <img src="./templates/Images/series/wanda.png" alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            Wanda Vision
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>9.5</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>120 mins</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>HD</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>16+</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END MOVIE ITEM -->
+                <!-- MOVIE ITEM -->
+                <div class="movie-item">
+                    <img src="./templates/Images/movies/bat-man.jpg" alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            The Dark Knight
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>9.5</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>120 mins</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>HD</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>16+</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END MOVIE ITEM -->
+            </div>
+        </div>
+        <!-- END TOP MOVIES SLIDE -->
+    </div>
+    <!-- END HERO SECTION -->
+
+    <!-- LATEST MOVIES SECTION -->
+    <div class="section">
+        <div class="container">
+            <div class="section-header">
+                latest movies
+            </div>
+            <div class="movies-slide carousel-nav-center owl-carousel">
+                <!-- MOVIE ITEM -->
+                <a href="#" class="movie-item">
+                    <img src="./templates/Images/movies/theatre-dead.jpg" alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            Theatre of the dead
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>9.5</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>120 mins</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>HD</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>16+</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- END MOVIE ITEM -->
+                <!-- MOVIE ITEM -->
+                <a href="#" class="movie-item">
+                    <img src="./templates/Images/movies/transformer.jpg" alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            Transformer
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>9.5</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>120 mins</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>HD</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>16+</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- END MOVIE ITEM -->
+                <!-- MOVIE ITEM -->
+                <a href="#" class="movie-item">
+                    <img src="./templates/Images/movies/resident-evil.jpg" alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            Resident Evil
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>9.5</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>120 mins</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>HD</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>16+</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- END MOVIE ITEM -->
+                <!-- MOVIE ITEM -->
+                <a href="#" class="movie-item">
+                    <img src="./templates/Images/movies/captain-marvel.png" alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            Captain Marvel
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>9.5</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>120 mins</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>HD</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>16+</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- END MOVIE ITEM -->
+                <!-- MOVIE ITEM -->
+                <a href="#" class="movie-item">
+                    <img src="./templates/Images/movies/hunter-killer.jpg" alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            Hunter Killer
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>9.5</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>120 mins</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>HD</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>16+</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- END MOVIE ITEM -->
+                <!-- MOVIE ITEM -->
+                <a href="#" class="movie-item">
+                    <img src="./templates/Images/movies/blood-shot.jpg" alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            Bloodshot
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>9.5</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>120 mins</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>HD</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>16+</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- END MOVIE ITEM -->
+                <!-- MOVIE ITEM -->
+                <a href="#" class="movie-item">
+                    <img src="./templates/Images/movies/call.jpg" alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            Call
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>9.5</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>120 mins</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>HD</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>16+</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- END MOVIE ITEM -->
+            </div>
+        </div>
+    </div>
+    <!-- END LATEST MOVIES SECTION -->
+
+    <!-- LATEST SERIES SECTION -->
+    <div class="section">
+        <div class="container">
+            <div class="section-header">
+                latest series
+            </div>
+            <div class="movies-slide carousel-nav-center owl-carousel">
+                <!-- MOVIE ITEM -->
+                <a href="#" class="movie-item">
+                    <img src="./templates/Images/series/supergirl.jpg" alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            Supergirl
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>9.5</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>120 mins</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>HD</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>16+</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- END MOVIE ITEM -->
+                <!-- MOVIE ITEM -->
+                <a href="#" class="movie-item">
+                    <img src="./templates/Images/series/stranger-thing.jpg" alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            Stranger Things
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>9.5</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>120 mins</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>HD</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>16+</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- END MOVIE ITEM -->
+                <!-- MOVIE ITEM -->
+                <a href="#" class="movie-item">
+                    <img src="./templates/Images/series/star-trek.jpg" alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            Star Trek
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>9.5</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>120 mins</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>HD</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>16+</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- END MOVIE ITEM -->
+                <!-- MOVIE ITEM -->
+                <a href="#" class="movie-item">
+                    <img src="./templates/Images/series/penthouses.jpg" alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            Penthouses
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>9.5</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>120 mins</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>HD</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>16+</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- END MOVIE ITEM -->
+                <!-- MOVIE ITEM -->
+                <a href="#" class="movie-item">
+                    <img src="./templates/Images/series/mandalorian.jpg" alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            Mandalorian
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>9.5</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>120 mins</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>HD</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>16+</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- END MOVIE ITEM -->
+                <!-- MOVIE ITEM -->
+                <a href="#" class="movie-item">
+                    <img src="./templates/Images/series/the-falcon.webp" alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            The Falcon And The Winter Soldier
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>9.5</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>120 mins</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>HD</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>16+</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- END MOVIE ITEM -->
+                <!-- MOVIE ITEM -->
+                <a href="#" class="movie-item">
+                    <img src="./templates/Images/series/wanda.png" alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            Wanda Vision
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>9.5</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>120 mins</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>HD</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>16+</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- END MOVIE ITEM -->
+            </div>
+        </div>
+    </div>
+    <!-- END LATEST SERIES SECTION -->
+
+    <!-- LATEST CARTOONS SECTION -->
+    <div class="section">
+        <div class="container">
+            <div class="section-header">
+                latest cartoons
+            </div>
+            <div class="movies-slide carousel-nav-center owl-carousel">
+                <!-- MOVIE ITEM -->
+                <a href="#" class="movie-item">
+                    <img src="./templates/Images/demon-slayer.jpg" alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            Demon Slayer
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>9.5</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>120 mins</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>HD</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>16+</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- END MOVIE ITEM -->
+                <!-- MOVIE ITEM -->
+                <a href="#" class="movie-item">
+                    <img src="./templates/Images/croods.jpg" alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            Croods
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>9.5</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>120 mins</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>HD</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>16+</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- END MOVIE ITEM -->
+                <!-- MOVIE ITEM -->
+                <a href="#" class="movie-item">
+                    <img src="./templates/Images/dragon.jpg" alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            Dragonball
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>9.5</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>120 mins</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>HD</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>16+</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- END MOVIE ITEM -->
+                <!-- MOVIE ITEM -->
+                <a href="#" class="movie-item">
+                    <img src="./templates/Images/over-the-moon.jpg" alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            Over The Moon
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>9.5</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>120 mins</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>HD</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>16+</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- END MOVIE ITEM -->
+                <!-- MOVIE ITEM -->
+                <a href="#" class="movie-item">
+                    <img src="./templates/Images/weathering.jpg" alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            Weathering With You
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>9.5</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>120 mins</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>HD</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>16+</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- END MOVIE ITEM -->
+                <!-- MOVIE ITEM -->
+                <a href="#" class="movie-item">
+                    <img src="./templates/Images/your-name.jpg" alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            Your Name
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>9.5</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>120 mins</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>HD</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>16+</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- END MOVIE ITEM -->
+                <!-- MOVIE ITEM -->
+                <a href="#" class="movie-item">
+                    <img src="./templates/Images/coco.jpg" alt="">
+                    <div class="movie-item-content">
+                        <div class="movie-item-title">
+                            Coco
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>9.5</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>120 mins</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>HD</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>16+</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- END MOVIE ITEM -->
+            </div>
+        </div>
+    </div>
+    <!-- END LATEST CARTOONS SECTION -->
+
+    <!-- SPECIAL MOVIE SECTION -->
+    <div class="section">
+        <div class="hero-slide-item">
+            <img src="./templates/Images/transformer-banner.jpg" alt="">
+            <div class="overlay"></div>
+            <div class="hero-slide-item-content">
+                <div class="item-content-wraper">
+                    <div class="item-content-title">
+                        Transformer
+                    </div>
+                    <div class="movie-infos">
+                        <div class="movie-info">
+                            <i class="bx bxs-star"></i>
+                            <span>9.5</span>
+                        </div>
+                        <div class="movie-info">
+                            <i class="bx bxs-time"></i>
+                            <span>120 mins</span>
+                        </div>
+                        <div class="movie-info">
+                            <span>HD</span>
+                        </div>
+                        <div class="movie-info">
+                            <span>16+</span>
+                        </div>
+                    </div>
+                    <div class="item-content-description">
+                        "Transformers" is a popular franchise featuring robots that can transform into vehicles and other objects. It includes
+                        Autobots and Decepticons, two rival factions of Transformers, and has been a part of pop culture since the 1980s.
+                    </div>
+                    <div class="item-action">
+                        <a href="#" class="btn btn-hover">
+                            <i class="bx bxs-right-arrow"></i>
+                            <span>Watch now</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END SPECIAL MOVIE SECTION -->
+
+    <!-- PRICING SECTION -->
+    <div class="section">
+        <div class="container">
+            <div class="pricing">
+                <div class="pricing-header">
+                    Fl<span class="main-color">i</span>x pricing
+                </div>
+                <div class="pricing-list">
+                    <div class="row">
+                        <div class="col-4 col-md-12 col-sm-12">
+                            <div class="pricing-box">
+                                <div class="pricing-box-header">
+                                    <div class="pricing-name">
+                                        Basic
+                                    </div>
+                                    <div class="pricing-price">
+                                        Free
+                                    </div>
+                                </div>
+                                <div class="pricing-box-content">
+                                    <p>Originals</p>
+                                    <p>Swich plans anytime</p>
+                                    <p><del>65+ top Live</del></p>
+                                    <p><del>TV Channels</del></p>
+                                </div>
+                                <div class="pricing-box-action">
+                                    <a href="#" class="btn btn-hover">
+                                        <span>Register now</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 col-md-12 col-sm-12">
+                            <div class="pricing-box hightlight">
+                                <div class="pricing-box-header">
+                                    <div class="pricing-name">
+                                        Premium
+                                    </div>
+                                    <div class="pricing-price">
+                                        $35.99 <span>/month</span>
+                                    </div>
+                                </div>
+                                <div class="pricing-box-content">
+                                    <p>Originals</p>
+                                    <p>Swich plans anytime</p>
+                                    <p><del>65+ top Live</del></p>
+                                    <p><del>TV Channels</del></p>
+                                </div>
+                                <div class="pricing-box-action">
+                                    <a href="#" class="btn btn-hover">
+                                        <span>Register now</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 col-md-12 col-sm-12">
+                            <div class="pricing-box">
+                                <div class="pricing-box-header">
+                                    <div class="pricing-name">
+                                        VIP
+                                    </div>
+                                    <div class="pricing-price">
+                                        $65.99 <span>/month</span>
+                                    </div>
+                                </div>
+                                <div class="pricing-box-content">
+                                    <p>Originals</p>
+                                    <p>Swich plans anytime</p>
+                                    <p><del>65+ top Live</del></p>
+                                    <p><del>TV Channels</del></p>
+                                </div>
+                                <div class="pricing-box-action">
+                                    <a href="#" class="btn btn-hover">
+                                        <span>Register now</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END PRICING SECTION -->
+
+    <!-- FOOTER SECTION -->
+    <footer class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-4 col-md-6 col-sm-12">
+                    <div class="content">
+                        <a href="#" class="logo">
+                            <i class='bx bx-movie-play bx-tada main-color'></i>Fl<span class="main-color">i</span>x
+                        </a>
+                        <p>
+                            Đồ án cuối kì - Web xem phim - Nhóm 2 <br>
+                            Phan Công Danh - 21133014; <br>
+                            Đái Triệu Phi - ....; <br>
+                            Nguyễn Tấn Khang - ....; <br>
+                            Lương Tường Vy - ....
+                        </p>
+                        <div class="social-list">
+                            <a href="#" class="social-item">
+                                <i class="bx bxl-facebook"></i>
+                            </a>
+                            <a href="#" class="social-item">
+                                <i class="bx bxl-twitter"></i>
+                            </a>
+                            <a href="#" class="social-item">
+                                <i class="bx bxl-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-8 col-md-6 col-sm-12">
+                    <div class="row">
+                        <div class="col-3 col-md-6 col-sm-6">
+                            <div class="content">
+                                <p><b>Flix</b></p>
+                                <ul class="footer-menu">
+                                    <li><a href="#">About us</a></li>
+                                    <li><a href="#">My profile</a></li>
+                                    <li><a href="#">Pricing plans</a></li>
+                                    <li><a href="#">Contacts</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-3 col-md-6 col-sm-6">
+                            <div class="content">
+                                <p><b>Browse</b></p>
+                                <ul class="footer-menu">
+                                    <li><a href="#">About us</a></li>
+                                    <li><a href="#">My profile</a></li>
+                                    <li><a href="#">Pricing plans</a></li>
+                                    <li><a href="#">Contacts</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-3 col-md-6 col-sm-6">
+                            <div class="content">
+                                <p><b>Help</b></p>
+                                <ul class="footer-menu">
+                                    <li><a href="#">About us</a></li>
+                                    <li><a href="#">My profile</a></li>
+                                    <li><a href="#">Pricing plans</a></li>
+                                    <li><a href="#">Contacts</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-3 col-md-6 col-sm-6">
+                            <div class="content">
+                                <p><b>Download app</b></p>
+                                <ul class="footer-menu">
+                                    <li>
+                                        <a href="#">
+                                            <img src="./templates/Images/google-play.png" alt="">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="./templates/Images/app-store.png" alt="">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- END FOOTER SECTION -->
+
+    <!-- SCRIPT -->
+    <!-- JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- OWL CAROUSEL -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"></script>
+    <!-- APP SCRIPT -->
+    <script src="./templates/JavaScript/app.js"></script>
 
-			<li><a href="#"> Account </a></li>
-
-		</ul>
-	</div>
-
-
-	<div class="navigation">
-		<ul>
-			<li class="item active"><a> <span class="icon"><i
-						class='bx bx-home-circle'></i></span> <span class="text">Home</span>
-			</a></li>
-
-
-			<li class="item"><a> <span class="icon"><ion-icon
-							name="film-outline"></ion-icon></span> <span class="text">Movie</span>
-			</a></li>
-
-			<li class="item"><a> <span class="icon"><ion-icon
-							name="tv-outline"></ion-icon></i></span> <span class="text">TVSeries</span>
-			</a></li>
-
-			<li class="item"><a> <span class="icon"><i
-						class='bx bx-user'></i></span> <span class="text">Profile</span>
-			</a></li>
-
-			<li class="item"><a> <span class="icon"><i
-						class='bx bx-cog'></i></span> <span class="text">Settings</span>
-			</a></li>
-			<div class="indicator"></div>
-		</ul>
-	</div>
-
-
-	<div class="progress-bar" id="progress-bar">
-		<a href="#" id="progress-val"> <ion-icon name="logo-foursquare"></ion-icon>
-		</a>
-	</div>
-
-	<div class="container">
-		<div class="nav">
-			<a href="#" class="logo"> <i style="margin-right: 10px;"
-				class='bx bx-movie-play bx-tada main-color'></i>Fl<span
-				class="main-color">i</span>x
-			</a>
-
-			<form action="" class="search-box">
-				<input type="text" name="search"
-					placeholder="Search Your Movie ....." class="nav-search">
-				<button type="password">
-					<i class='bx bx-search-alt'></i>
-				</button>
-			</form>
-
-			<div class="nav-sign">
-				<a href="login" class="btn btn-hover"> <span>Log in</span>
-				</a>
-
-			</div>
-			<div class="menu-toggle">
-				<ion-icon name="menu-outline" class="open"></ion-icon>
-				<ion-icon name="close-outline" class="close"></ion-icon>
-
-
-			</div>
-		</div>
-	</div>
-
-
-	<div class="nav-wrapper">
-		<ul class="nav-menu" id="nav-menu">
-			<li class="nav-item active"><a href="#"> <span
-					class="nav-icon"><ion-icon name="home-outline"></ion-icon></span>
-					Home
-			</a></li>
-
-			<li class="nav-item"><a href="#latest-section"> <span
-					class="nav-icon"><ion-icon name="film-outline"></ion-icon></span>
-					Movies
-			</a></li>
-			<li class="nav-item"><a href="#section-tv"> <span
-					class="nav-icon"><ion-icon name="tv-outline"></ion-icon></span> Tv
-					Series
-			</a></li>
-
-			<li class="nav-item"><a href="#"> <span class="nav-icon"><ion-icon
-							name="grid-outline"></ion-icon></span> Genre
-			</a></li>
-
-			<li class="nav-item"><a href="#"> <span class="nav-icon"><ion-icon
-							name="settings-outline"></ion-icon></span> setting
-			</a></li>
-			<li class="nav-item"><a href="#"> <span class="nav-icon"><ion-icon
-							name="chatbubbles-outline"></ion-icon></span> messages
-			</a></li>
-			<li class="nav-item"><a href="#"> <span class="nav-icon"><ion-icon
-							name="help-circle-outline"></ion-icon></span> about
-			</a></li>
-
-			<li class="nav-item"><a href="#"> <span class="nav-icon"><ion-icon
-							name="person-outline"></ion-icon></span> Account
-			</a></li>
-
-		</ul>
-	</div>
-
-	<!--END NAV -->
-
-	<!-- SLIDE SECTION -->
-	<div class="big-section" id="big-section">
-		<!-- BIG SLIDES -->
-		<div class="slide-container" id="big-slider">
-
-			<div class="big-slide-item active">
-				<img src="./templates/Images/p-2.jpg" alt="Poster">
-
-				<div class="big-slide-item-content">
-					<div class="item-content-wrapper">
-						<div class="item-content-title">Pirate caribbean</div>
-
-						<div class="movies-infors">
-							<div class="movies-infor">
-								<ion-icon name="bookmark-outline"></ion-icon>
-								<span>9.5</span>
-							</div>
-							<div class="movies-infor">
-								<ion-icon name="time-outline"></ion-icon>
-								<span>120 mins</span>
-							</div>
-							<div class="movies-infor">
-								<ion-icon name="cube-outline"></ion-icon>
-								<span>FHD</span>
-							</div>
-						</div>
-
-						<div class="item-content-description ">Lorem ipsum dolor sit
-							amet consectetur adipisicing elit. Quas, possimus eius. Deserunt
-							non odit, cum vero reprehenderit laudantium odio vitae autem
-							quam, incidunt molestias ratione mollitia accusantium, facere ab
-							suscipit.</div>
-					</div>
-				</div>
-
-				<div class="play-movies">
-					<div class="ring"></div>
-					<a href="https://www.youtube.com/watch?v=Hgeu5rhoxxY&t=10s"> <i
-						class='bx bxs-right-arrow'></i>
-					</a>
-					<div class="btn-watch">
-						<span>watch trailer</span>
-					</div>
-				</div>
-			</div>
-
-			<div class="big-slide-item">
-				<img src="./templates/Images/p-6.jpg" alt="Poster">
-
-				<div class="big-slide-item-content">
-					<div class="item-content-wrapper">
-						<div class="item-content-title ">black widow</div>
-
-						<div class="movies-infors">
-							<div class="movies-infor">
-								<ion-icon name="bookmark-outline"></ion-icon>
-								<span>9.5</span>
-							</div>
-							<div class="movies-infor">
-								<ion-icon name="time-outline"></ion-icon>
-								<span>120 mins</span>
-							</div>
-							<div class="movies-infor">
-								<ion-icon name="cube-outline"></ion-icon>
-								<span>FHD</span>
-							</div>
-						</div>
-
-						<div class="item-content-description ">Lorem ipsum dolor sit
-							amet consectetur adipisicing elit. Quas, possimus eius. Deserunt
-							non odit, cum vero reprehenderit laudantium odio vitae autem
-							quam, incidunt molestias ratione mollitia accusantium, facere ab
-							suscipit.</div>
-					</div>
-				</div>
-
-				<div class="play-movies ">
-					<div class="ring"></div>
-					<a href="https://www.youtube.com/watch?v=ybji16u608U"> <i
-						class='bx bxs-right-arrow'></i>
-					</a>
-					<div class="btn-watch">
-						<span>watch trailer</span>
-					</div>
-				</div>
-			</div>
-
-			<div class="big-slide-item">
-				<img src="./templates/Images/transformer-banner.jpg" alt="Poster">
-
-				<div class="big-slide-item-content">
-					<div class="item-content-wrapper">
-						<div class="item-content-title">Transformer</div>
-
-						<div class="movies-infors ">
-							<div class="movies-infor">
-								<ion-icon name="bookmark-outline"></ion-icon>
-								<span>9.5</span>
-							</div>
-							<div class="movies-infor">
-								<ion-icon name="time-outline"></ion-icon>
-								<span>120 mins</span>
-							</div>
-							<div class="movies-infor">
-								<ion-icon name="cube-outline"></ion-icon>
-								<span>FHD</span>
-							</div>
-						</div>
-
-						<div class="item-content-description  ">Lorem ipsum dolor
-							sit amet consectetur adipisicing elit. Quas, possimus eius.
-							Deserunt non odit, cum vero reprehenderit laudantium odio vitae
-							autem quam, incidunt molestias ratione mollitia accusantium,
-							facere ab suscipit.</div>
-					</div>
-				</div>
-
-				<div class="play-movies ">
-					<div class="ring"></div>
-					<a href="https://www.youtube.com/watch?v=Q3VKie4pChs"> <i
-						class='bx bxs-right-arrow'></i>
-					</a>
-					<div class="btn-watch">
-						<span>watch trailer</span>
-					</div>
-				</div>
-			</div>
-
-			<div class="big-slide-item">
-				<img src="./templates/Images/p-3.jpg" alt="Poster">
-
-				<div class="big-slide-item-content">
-					<div class="item-content-wrapper">
-						<div class="item-content-title ">bloodShot</div>
-
-						<div class="movies-infors">
-							<div class="movies-infor">
-								<ion-icon name="bookmark-outline"></ion-icon>
-								<span>9.5</span>
-							</div>
-							<div class="movies-infor">
-								<ion-icon name="time-outline"></ion-icon>
-								<span>120 mins</span>
-							</div>
-							<div class="movies-infor">
-								<ion-icon name="cube-outline"></ion-icon>
-								<span>FHD</span>
-							</div>
-						</div>
-
-						<div class="item-content-description">Lorem ipsum dolor sit
-							amet consectetur adipisicing elit. Quas, possimus eius. Deserunt
-							non odit, cum vero reprehenderit laudantium odio vitae autem
-							quam, incidunt molestias ratione mollitia accusantium, facere ab
-							suscipit.</div>
-					</div>
-				</div>
-
-				<div class="play-movies ">
-					<div class="ring"></div>
-					<a href="https://www.youtube.com/watch?v=vOUVVDWdXbo"> <i
-						class='bx bxs-right-arrow'></i>
-					</a>
-					<div class="btn-watch">
-						<span>watch trailer</span>
-					</div>
-				</div>
-			</div>
-
-			<ul class="slide-control">
-				<li class="slide-prev"><ion-icon name="chevron-back-outline"></ion-icon>
-				</li>
-
-				<li class="slide-next"><ion-icon name="chevron-forward-outline"></ion-icon>
-				</li>
-			</ul>
-
-		</div>
-	</div>
-
-	<!--END SLIDE SECTION -->
-
-
-	<!-- LATEST SECTION -->
-	<div class="section" id="latest-section">
-		<div class="section-wrapper" id="section-wrapper">
-			<div class="section-header">Trending movies</div>
-
-			<div class="movies-slide row">
-
-				<a href="component"
-					class="movie-item col-3-5 m-5 s-11 to-top show-on-scroll">
-					<div>
-						<img src="./templates/Images/raya1.jpg" alt="">
-						<div class="movie-item-content">
-							<div class="movie-item-title">raya and the last dragon</div>
-
-							<div class="movies-infors-card">
-								<div class="movies-infor">
-									<ion-icon name="bookmark-outline"></ion-icon>
-									<span>9.0</span>
-								</div>
-								<div class="movies-infor">
-									<ion-icon name="time-outline"></ion-icon>
-									<span>120 mins</span>
-								</div>
-								<div class="movies-infor">
-									<ion-icon name="cube-outline"></ion-icon>
-									<span>FHD</span>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="movie-item-overlay"></div>
-					<div class="movie-item-act">
-						<!-- <div class="ring"></div> -->
-						<i class='bx bxs-right-arrow'></i>
-
-						<div>
-							<i class='bx bxs-share-alt'></i> <i class='bx bxs-heart'></i> <i
-								class='bx bx-plus-medical'></i>
-						</div>
-					</div>
-
-				</a> <a href="#"
-					class="movie-item col-3-5 m-5 s-11 to-top show-on-scroll">
-					<div>
-						<img src="./templates/Images/p-4.jpg" alt="">
-						<div class="movie-item-content">
-							<div class="movie-item-title">venon: let there be carnage</div>
-
-							<div class="movies-infors-card">
-								<div class="movies-infor">
-									<ion-icon name="bookmark-outline"></ion-icon>
-									<span>9.0</span>
-								</div>
-								<div class="movies-infor">
-									<ion-icon name="time-outline"></ion-icon>
-									<span>120 mins</span>
-								</div>
-								<div class="movies-infor">
-									<ion-icon name="cube-outline"></ion-icon>
-									<span>FHD</span>
-								</div>
-
-							</div>
-						</div>
-						<div class="movie-item-overlay"></div>
-						<div class="movie-item-act">
-							<!-- <div class="ring"></div> -->
-							<i class='bx bxs-right-arrow'></i>
-
-							<div>
-								<i class='bx bxs-share-alt'></i> <i class='bx bxs-heart'></i> <i
-									class='bx bx-plus-medical'></i>
-							</div>
-						</div>
-
-					</div>
-				</a> <a href="#"
-					class="movie-item col-3-5 m-5 s-11  to-top show-on-scroll">
-					<div>
-						<img src="./templates/Images/p-5.jpg" alt="">
-						<div class="movie-item-content">
-							<div class="movie-item-title">dealpool 2</div>
-
-							<div class="movies-infors-card">
-								<div class="movies-infor">
-									<ion-icon name="bookmark-outline"></ion-icon>
-									<span>9.0</span>
-								</div>
-								<div class="movies-infor">
-									<ion-icon name="time-outline"></ion-icon>
-									<span>120 mins</span>
-								</div>
-								<div class="movies-infor">
-									<ion-icon name="cube-outline"></ion-icon>
-									<span>FHD</span>
-								</div>
-
-							</div>
-						</div>
-
-						<div class="movie-item-overlay"></div>
-
-						<div class="movie-item-act">
-							<!-- <div class="ring"></div> -->
-							<i class='bx bxs-right-arrow'></i>
-
-							<div>
-								<i class='bx bxs-share-alt'></i> <i class='bx bxs-heart'></i> <i
-									class='bx bx-plus-medical'></i>
-							</div>
-						</div>
-
-					</div>
-				</a> <a href="#"
-					class="movie-item col-3-5 m-5 s-11  to-top show-on-scroll">
-					<div>
-						<img src="./templates/Images/post-2.jpg" alt="">
-						<div class="movie-item-content">
-							<div class="movie-item-title">The tomorrow war</div>
-
-							<div class="movies-infors-card">
-								<div class="movies-infor">
-									<ion-icon name="bookmark-outline"></ion-icon>
-									<span>9.0</span>
-								</div>
-								<div class="movies-infor">
-									<ion-icon name="time-outline"></ion-icon>
-									<span>120 mins</span>
-								</div>
-								<div class="movies-infor">
-									<ion-icon name="cube-outline"></ion-icon>
-									<span>FHD</span>
-								</div>
-
-							</div>
-						</div>
-
-						<div class="movie-item-overlay"></div>
-
-						<div class="movie-item-act">
-							<!-- <div class="ring"></div> -->
-							<i class='bx bxs-right-arrow'></i>
-
-							<div>
-								<i class='bx bxs-share-alt'></i> <i class='bx bxs-heart'></i> <i
-									class='bx bx-plus-medical'></i>
-							</div>
-						</div>
-
-					</div>
-				</a> <a href="#"
-					class="movie-item col-3-5 m-5 s-11  to-top show-on-scroll">
-					<div>
-						<img src="./templates/Images/post-3.jpg" alt="">
-						<div class="movie-item-content">
-							<div class="movie-item-title">jungle cruise</div>
-
-							<div class="movies-infors-card">
-								<div class="movies-infor">
-									<ion-icon name="bookmark-outline"></ion-icon>
-									<span>9.0</span>
-								</div>
-								<div class="movies-infor">
-									<ion-icon name="time-outline"></ion-icon>
-									<span>120 mins</span>
-								</div>
-								<div class="movies-infor">
-									<ion-icon name="cube-outline"></ion-icon>
-									<span>FHD</span>
-								</div>
-
-							</div>
-						</div>
-
-						<div class="movie-item-overlay"></div>
-
-						<div class="movie-item-act">
-							<!-- <div class="ring"></div> -->
-							<i class='bx bxs-right-arrow'></i>
-
-							<div>
-								<i class='bx bxs-share-alt'></i> <i class='bx bxs-heart'></i> <i
-									class='bx bx-plus-medical'></i>
-							</div>
-						</div>
-
-					</div>
-				</a> <a href="#"
-					class="movie-item col-3-5 m-5 s-11  to-top show-on-scroll">
-					<div>
-						<img src="./templates/Images/post-4.jpg" alt="">
-						<div class="movie-item-content">
-							<div class="movie-item-title">dune</div>
-
-							<div class="movies-infors-card">
-								<div class="movies-infor">
-									<ion-icon name="bookmark-outline"></ion-icon>
-									<span>9.0</span>
-								</div>
-								<div class="movies-infor">
-									<ion-icon name="time-outline"></ion-icon>
-									<span>120 mins</span>
-								</div>
-								<div class="movies-infor">
-									<ion-icon name="cube-outline"></ion-icon>
-									<span>FHD</span>
-								</div>
-
-							</div>
-						</div>
-
-						<div class="movie-item-overlay"></div>
-
-						<div class="movie-item-act">
-							<!-- <div class="ring"></div> -->
-							<i class='bx bxs-right-arrow'></i>
-
-							<div>
-								<i class='bx bxs-share-alt'></i> <i class='bx bxs-heart'></i> <i
-									class='bx bx-plus-medical'></i>
-							</div>
-						</div>
-
-					</div>
-				</a> <a href="#"
-					class="movie-item col-3-5 m-5 s-11  to-top show-on-scroll">
-					<div>
-						<img src="./templates/Images/post-5.jpg" alt="">
-						<div class="movie-item-content">
-							<div class="movie-item-title">The suicide squad</div>
-
-							<div class="movies-infors-card">
-								<div class="movies-infor">
-									<ion-icon name="bookmark-outline"></ion-icon>
-									<span>9.0</span>
-								</div>
-								<div class="movies-infor">
-									<ion-icon name="time-outline"></ion-icon>
-									<span>120 mins</span>
-								</div>
-								<div class="movies-infor">
-									<ion-icon name="cube-outline"></ion-icon>
-									<span>FHD</span>
-								</div>
-
-							</div>
-						</div>
-
-						<div class="movie-item-overlay"></div>
-
-						<div class="movie-item-act">
-							<!-- <div class="ring"></div> -->
-							<i class='bx bxs-right-arrow'></i>
-
-							<div>
-								<i class='bx bxs-share-alt'></i> <i class='bx bxs-heart'></i> <i
-									class='bx bx-plus-medical'></i>
-							</div>
-						</div>
-
-					</div>
-				</a> <a href="#"
-					class="movie-item col-3-5 m-5 s-11  to-top show-on-scroll">
-					<div>
-						<img src="./templates/Images/post-6.jpg" alt="">
-						<div class="movie-item-content">
-							<div class="movie-item-title">no time to die</div>
-
-							<div class="movies-infors-card">
-								<div class="movies-infor">
-									<ion-icon name="bookmark-outline"></ion-icon>
-									<span>9.0</span>
-								</div>
-								<div class="movies-infor">
-									<ion-icon name="time-outline"></ion-icon>
-									<span>120 mins</span>
-								</div>
-								<div class="movies-infor">
-									<ion-icon name="cube-outline"></ion-icon>
-									<span>FHD</span>
-								</div>
-
-							</div>
-						</div>
-
-						<div class="movie-item-overlay"></div>
-
-						<div class="movie-item-act">
-							<!-- <div class="ring"></div> -->
-							<i class='bx bxs-right-arrow'></i>
-
-							<div>
-								<i class='bx bxs-share-alt'></i> <i class='bx bxs-heart'></i> <i
-									class='bx bx-plus-medical'></i>
-							</div>
-						</div>
-
-					</div>
-				</a> <a href="#"
-					class="movie-item col-3-5 m-5 s-11 to-top show-on-scroll">
-					<div>
-						<img src="./templates/Images/post-10.jpg" alt="">
-						<div class="movie-item-content">
-							<div class="movie-item-title">prisoner of the ghostland</div>
-
-							<div class="movies-infors-card">
-								<div class="movies-infor">
-									<ion-icon name="bookmark-outline"></ion-icon>
-									<span>9.0</span>
-								</div>
-								<div class="movies-infor">
-									<ion-icon name="time-outline"></ion-icon>
-									<span>120 mins</span>
-								</div>
-								<div class="movies-infor">
-									<ion-icon name="cube-outline"></ion-icon>
-									<span>FHD</span>
-								</div>
-
-							</div>
-						</div>
-
-						<div class="movie-item-overlay"></div>
-
-						<div class="movie-item-act">
-							<!-- <div class="ring"></div> -->
-							<i class='bx bxs-right-arrow'></i>
-
-							<div>
-								<i class='bx bxs-share-alt'></i> <i class='bx bxs-heart'></i> <i
-									class='bx bx-plus-medical'></i>
-							</div>
-						</div>
-
-					</div>
-				</a>
-
-				<div class="btn-load btn-load-tb">
-					<span>load more</span>
-				</div>
-
-			</div>
-
-
-
-		</div>
-	</div>
-
-	<!-- END LATEST SECTION -->
-
-	<!-- TV SERIES -->
-	<div class="section-tv" id="section-tv">
-		<div class="section-wrapper">
-			<div class="section-header">
-				<span> tv Series</span>
-				<!-- <div class="btn-load-2">
-                              <span>load more</span>
-                         </div> -->
-			</div>
-
-			<div class="movies-slide row" id="tv-slider">
-				<a href="#"
-					class="movie-item col-3-5  m-5 s-11 to-top show-on-scroll">
-					<div>
-						<img src="./templates/Images/post-9.jpg" alt="">
-						<div class="movie-item-content">
-							<div class="movie-item-title">wanda Vision</div>
-
-							<div class="movies-infors-card">
-								<div class="movies-infor">
-									<ion-icon name="bookmark-outline"></ion-icon>
-									<span>9.0</span>
-								</div>
-								<div class="movies-infor">
-									<ion-icon name="time-outline"></ion-icon>
-									<span>120 mins</span>
-								</div>
-								<div class="movies-infor">
-									<ion-icon name="cube-outline"></ion-icon>
-									<span>FHD</span>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="movie-item-overlay"></div>
-					<div class="movie-item-act">
-						<i class='bx bxs-right-arrow'></i>
-
-						<div>
-							<i class='bx bxs-share-alt'></i> <i class='bx bxs-heart'></i> <i
-								class='bx bx-plus-medical'></i>
-						</div>
-					</div>
-
-				</a> <a href="#"
-					class="movie-item col-3-5  m-5 s-11 to-top show-on-scroll ">
-					<div>
-						<img src="./templates/Images/post-8.jpg" alt="">
-						<div class="movie-item-content">
-							<div class="movie-item-title">rumble</div>
-
-							<div class="movies-infors-card">
-								<div class="movies-infor">
-									<ion-icon name="bookmark-outline"></ion-icon>
-									<span>9.0</span>
-								</div>
-								<div class="movies-infor">
-									<ion-icon name="time-outline"></ion-icon>
-									<span>120 mins</span>
-								</div>
-								<div class="movies-infor">
-									<ion-icon name="cube-outline"></ion-icon>
-									<span>FHD</span>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="movie-item-overlay"></div>
-					<div class="movie-item-act">
-						<i class='bx bxs-right-arrow'></i>
-
-						<div>
-							<i class='bx bxs-share-alt'></i> <i class='bx bxs-heart'></i> <i
-								class='bx bx-plus-medical'></i>
-						</div>
-					</div>
-
-				</a> <a href="#"
-					class="movie-item col-3-5  m-5 s-11 to-top show-on-scroll">
-					<div>
-						<img src="./templates/Images/post-1.jpg" alt="">
-						<div class="movie-item-content">
-							<div class="movie-item-title">venon</div>
-
-							<div class="movies-infors-card">
-								<div class="movies-infor">
-									<ion-icon name="bookmark-outline"></ion-icon>
-									<span>9.0</span>
-								</div>
-								<div class="movies-infor">
-									<ion-icon name="time-outline"></ion-icon>
-									<span>120 mins</span>
-								</div>
-								<div class="movies-infor">
-									<ion-icon name="cube-outline"></ion-icon>
-									<span>FHD</span>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="movie-item-overlay"></div>
-					<div class="movie-item-act">
-						<i class='bx bxs-right-arrow'></i>
-
-						<div>
-							<i class='bx bxs-share-alt'></i> <i class='bx bxs-heart'></i> <i
-								class='bx bx-plus-medical'></i>
-						</div>
-					</div>
-
-				</a> <a href="#"
-					class="movie-item col-3-5  m-5 s-11 to-top show-on-scroll">
-					<div>
-						<img src="./templates/Images/post-11.jpg" alt="">
-						<div class="movie-item-content">
-							<div class="movie-item-title">luca</div>
-
-							<div class="movies-infors-card">
-								<div class="movies-infor">
-									<ion-icon name="bookmark-outline"></ion-icon>
-									<span>9.0</span>
-								</div>
-								<div class="movies-infor">
-									<ion-icon name="time-outline"></ion-icon>
-									<span>120 mins</span>
-								</div>
-								<div class="movies-infor">
-									<ion-icon name="cube-outline"></ion-icon>
-									<span>FHD</span>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="movie-item-overlay"></div>
-					<div class="movie-item-act">
-						<i class='bx bxs-right-arrow'></i>
-
-						<div>
-							<i class='bx bxs-share-alt'></i> <i class='bx bxs-heart'></i> <i
-								class='bx bx-plus-medical'></i>
-						</div>
-					</div>
-
-				</a> <a href="#"
-					class="movie-item col-3-5  m-5 s-11 to-top show-on-scroll">
-					<div>
-						<img src="./templates/Images/post-12.jpg" alt="">
-						<div class="movie-item-content">
-							<div class="movie-item-title">annette</div>
-
-							<div class="movies-infors-card">
-								<div class="movies-infor">
-									<ion-icon name="bookmark-outline"></ion-icon>
-									<span>9.0</span>
-								</div>
-								<div class="movies-infor">
-									<ion-icon name="time-outline"></ion-icon>
-									<span>120 mins</span>
-								</div>
-								<div class="movies-infor">
-									<ion-icon name="cube-outline"></ion-icon>
-									<span>FHD</span>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="movie-item-overlay"></div>
-					<div class="movie-item-act">
-						<i class='bx bxs-right-arrow'></i>
-
-						<div>
-							<i class='bx bxs-share-alt'></i> <i class='bx bxs-heart'></i> <i
-								class='bx bx-plus-medical'></i>
-						</div>
-					</div>
-
-				</a> <a href="#"
-					class="movie-item col-3-5  m-5 s-11 to-top show-on-scroll ">
-					<div>
-						<img src="./templates/Images/start-trek.jpeg" alt="">
-						<div class="movie-item-content">
-							<div class="movie-item-title">star trek Discovery</div>
-
-							<div class="movies-infors-card">
-								<div class="movies-infor">
-									<ion-icon name="bookmark-outline"></ion-icon>
-									<span>9.0</span>
-								</div>
-								<div class="movies-infor">
-									<ion-icon name="time-outline"></ion-icon>
-									<span>120 mins</span>
-								</div>
-								<div class="movies-infor">
-									<ion-icon name="cube-outline"></ion-icon>
-									<span>FHD</span>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="movie-item-overlay"></div>
-
-					<div class="movie-item-act">
-						<i class='bx bxs-right-arrow'></i>
-
-						<div>
-							<i class='bx bxs-share-alt'></i> <i class='bx bxs-heart'></i> <i
-								class='bx bx-plus-medical'></i>
-						</div>
-					</div>
-
-				</a>
-
-
-				<div class="btn-load ">
-					<span>load more</span>
-				</div>
-
-			</div>
-		</div>
-	</div>
-
-
-
-	<!-- TV SERIES -->
-
-	<!-- SPECIAL MOVIES -->
-	<div class="special">
-		<div class="section-wrapper">
-			<div class="section-header">hot movie</div>
-			<div
-				class="big-slide-item special-movie active to-top show-on-scroll">
-				<img src="./templates/Images/black-banner.png" alt="Poster">
-
-				<div class="big-slide-item-content">
-					<div class="item-content-wrapper">
-						<div class="item-content-title ">black Panther</div>
-
-						<div class="movies-infors">
-							<div class="movies-infor">
-								<ion-icon name="bookmark-outline"></ion-icon>
-								<span>9.5</span>
-							</div>
-							<div class="movies-infor">
-								<ion-icon name="time-outline"></ion-icon>
-								<span>120 mins</span>
-							</div>
-							<div class="movies-infor">
-								<ion-icon name="cube-outline"></ion-icon>
-								<span>FHD</span>
-							</div>
-						</div>
-
-						<div class="item-content-description ">Lorem ipsum dolor sit
-							amet consectetur adipisicing elit. Quas, possimus eius. Deserunt
-							non odit, cum vero reprehenderit laudantium odio vitae autem
-							quam, incidunt molestias ratione mollitia accusantium, facere ab
-							suscipit.</div>
-					</div>
-				</div>
-
-				<div class="play-movies ">
-					<div class="ring"></div>
-					<a href="https://www.youtube.com/watch?v=qZuQc-GvRlk"> <i
-						class='bx bxs-right-arrow'></i>
-					</a>
-					<div class="btn-watch">
-						<span>watch trailer</span>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!--END SPECIAL MOVIES -->
-
-
-
-
-	<footer class="footer ">
-		<div class="section-wrapper">
-			<div class="row ">
-				<div class="col-6 footer-header">
-					<a href="#" class="logo"> <i style="margin-right: 10px;"
-						class='bx bx-movie-play bx-tada main-color'></i>Fl<span
-						class="main-color">i</span>x
-					</a>
-
-					<p class="description">Lorem ipsum dolor sit amet consectetur
-						adipisicing elit. Quas, possimus eius. Deserunt non odit, cum vero
-						reprehenderit laudantium odio vitae autem quam, incidunt molestias
-						ratione mollitia accusantium, facere ab suscipit.</p>
-					<div class="social-list">
-						<a href="#" class="social-item"> <i class="bx bxl-facebook"></i>
-						</a> <a href="#" class="social-item"> <i class="bx bxl-instagram"></i>
-						</a> <a href="#" class="social-item"> <i class="bx bxl-twitter"></i>
-						</a>
-					</div>
-				</div>
-
-				<div class="col-12 footer-item">
-					<div class="row">
-						<div class="col-4 align-items-center">
-							<div class="content">
-								<p class="main-color" style="font-size: 1.2rem;">
-									<b>Flix</b>
-								</p>
-								<ul class="footer-menu">
-									<li><a href="#"> About us</a></li>
-									<li><a href="#"> My profile</a></li>
-									<li><a href="#"> Pricing plans</a></li>
-									<li><a href="#"> Contacts</a></li>
-								</ul>
-							</div>
-						</div>
-
-
-						<div class="col-4 align-items-center">
-							<div class="content">
-								<p class="main-color" style="font-size: 1.2rem;">
-									<b>Browse</b>
-								</p>
-								<ul class="footer-menu">
-									<li><a href="#">Live TV</a></li>
-									<li><a href="#">Live Movies</a></li>
-									<li><a href="#">Live Series</a></li>
-									<li><a href="#">Streaming Library</a></li>
-								</ul>
-							</div>
-						</div>
-
-						<div class="col-4 align-items-center">
-							<div class="content">
-								<p class="main-color" style="font-size: 1.2rem;">
-									<b>Help</b>
-								</p>
-								<ul class="footer-menu">
-									<li><a href="#">Account & Billing</a></li>
-									<li><a href="#">Plans & Pricing</a></li>
-									<li><a href="#">Supported devices</a></li>
-									<li><a href="#">Accessibility</a></li>
-								</ul>
-							</div>
-						</div>
-
-
-					</div>
-				</div>
-			</div>
-
-
-
-		</div>
-	</footer>
-
-
-	<script src="./templates/JavaScript/main.js"></script>
 </body>
+
 </html>
