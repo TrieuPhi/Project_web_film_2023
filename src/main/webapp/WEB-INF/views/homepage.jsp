@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -41,7 +40,7 @@
                     <li><a href="#">Series</a></li>
                     <li><a href="#">About</a></li>
                     <li>
-                        <a href="./login-signup/index.html" class="btn btn-hover">
+                        <a href="signin-signup" class="btn btn-hover">
                             <span>Sign in</span>
                         </a>
                     </li>
