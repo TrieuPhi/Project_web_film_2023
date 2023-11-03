@@ -43,7 +43,7 @@
 					<li><a href="#">Movies</a></li>
 					<li><a href="#">Series</a></li>
 					<li><a href="#">About</a></li>
-					<li><a href="./login-signup/index.html" class="btn btn-hover">
+					<li><a href="signin-signup" class="btn btn-hover">
 							<span>Sign in</span>
 					</a></li>
 				</ul>
@@ -127,7 +127,7 @@
 								The show explores themes of empowerment, identity, and heroism.
 							</div>
 							<div class="item-action top-down delay-6">
-								<a href="#" class="btn btn-hover"> <i
+								<a href="component" class="btn btn-hover"> <i
 									class="bx bxs-right-arrow"></i> <span>Watch now</span>
 								</a>
 							</div>
