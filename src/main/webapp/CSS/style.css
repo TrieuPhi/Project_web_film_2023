@@ -5,7 +5,8 @@
 }
 
 body {
-    background-image: url("../images/netflix.jpg");
+    background: #e6ceff;
+    background-image: url("../Images/netflix.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
