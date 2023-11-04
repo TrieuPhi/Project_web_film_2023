@@ -15,8 +15,8 @@ public class CustomerDao {
 		Users us = new Users();
 		while (rs.next()) 
 		{
-//			us=new Users(rs.getInt("UserID"), rs.getNString("FullName"), rs.getString("Email"), rs.getString("Phone"),
-//					rs.getNString("Address"), rs.getString("PassWord"), rs.getNString("Account_Type"));
+			us=new Users(rs.getInt("UserID"), rs.getNString("FullName"), rs.getString("Email"), rs.getString("Phone"),
+					rs.getNString("Address"), rs.getString("PassWord"), rs.getNString("Account_Type"));
 			us=new Users();
 		}
 		return us;

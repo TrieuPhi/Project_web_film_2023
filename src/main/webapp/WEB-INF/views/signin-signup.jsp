@@ -9,14 +9,15 @@
     <link rel="stylesheet" href="./templates/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <title>
-        Sign in/up 
+        Signin/Signup 
     </title>
 </head>
 
 <body>
+
     <div class="container" id="container">
         <div class="form-container sign-up-container">
-            <form action="#">
+            <form action="signup" method="post">
                 <h1>Create Account</h1>
                 <div class="social-container">
                     <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
@@ -24,14 +25,15 @@
                     <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
                 </div>
                 <span>or use your email for registration</span>
-                <input type="email" placeholder="Email" />
-                <input type="password" placeholder="Password" />
+                <input type="email" placeholder="Email" name = "Email"/>
+                <input type="password" placeholder="Password" name = "Password"/>
                 <input type="password" placeholder="Re-enter password" />
                 <button>Sign Up</button>
             </form>
         </div>
+        
         <div class="form-container sign-in-container">
-            <form action="#">
+            <form action="signin" method="post">
                 <h1>Sign in</h1>
                 <div class="social-container">
                     <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
@@ -39,12 +41,13 @@
                     <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
                 </div>
                 <span>or use your account</span>
-                <input type="email" placeholder="Email" />
-                <input type="password" placeholder="Password" />
+                <input type="email" placeholder="Email" name = "Email"/>
+                <input type="password" placeholder="Password" name ="Password"/>
                 <a href="#">Forgot your password?</a>
-                <button>Sign In</button>
+                <button >Sign In</button>
             </form>
         </div>
+        
         <div class="overlay-container">
             <div class="overlay">
                 <div class="overlay-panel overlay-left">
